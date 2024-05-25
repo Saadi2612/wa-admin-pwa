@@ -13,28 +13,28 @@ const PanelLayout = ({ children }) => {
 
   const router = useRouter();
 
-  useEffect(() => {
-    const user = localStorage.getItem("user");
+  // useEffect(() => {
+  //   const user = localStorage.getItem("user");
 
-    if (!user) {
-      router.push("/auth/admin-login");
-    } else {
-      setIsLoading(false);
-    }
-  }, [router]);
+  //   if (!user) {
+  //     router.push("/auth/admin-login");
+  //   } else {
+  //     setIsLoading(false);
+  //   }
+  // }, [router]);
 
-  if (isLoading) {
-    return (
-      <Flex
-        h="100dvh"
-        w={"full"}
-        justifyContent={"center"}
-        alignItems={"center"}
-      >
-        <Spinner size={"lg"} color="#A94A9C" />
-      </Flex>
-    );
-  }
+  // if (isLoading) {
+  //   return (
+  //     <Flex
+  //       h="100dvh"
+  //       w={"full"}
+  //       justifyContent={"center"}
+  //       alignItems={"center"}
+  //     >
+  //       <Spinner size={"lg"} color="#A94A9C" />
+  //     </Flex>
+  //   );
+  // }
 
   return (
     <Flex
